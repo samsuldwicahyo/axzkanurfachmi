@@ -1,0 +1,1 @@
+var json_RumahAzka_7 = {"type":"FeatureCollection","name":"RumahAzka_7","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","nama":"Azka Home"},"geometry":{"type":"Point","coordinates":[109.243347597230866,-7.410691145288171]}}]}

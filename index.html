@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peta Desa Karangtalun Lor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* Warna untuk mode terang dan gelap */
+    :root {
+      --bg-light: #f4f4f4;
+      --bg-dark: #1e1e1e;
+      --text-light: #333;
+      --text-dark: #f4f4f4;
+      --navbar-light: #FFD700;
+      --navbar-dark: #333;
+      --highlight-light: #FFECB3;
+      --highlight-dark: #555;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-light);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .navbar {
+      background-color: var(--navbar-light);
+      transition: background-color 0.3s;
+    }
+
+    .hero-section {
+      background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgmJiPN5xOo_V6KETFFmMW4Smoio_67uQdAcI_ZoiuWCIMY6Q5PY1dvtfHJEhbJQQQvts9e1OKGSf4GAAjUlJCBquFudHLgGiAV1deqDYudp0O-hLAia7W4p2U-iyPQqTJL8rs7VIu_cPWpRhzqj2FdCeOM-Je7HPan2wp46ii2dWqRs5uTzyNXrhxL/s1600/20220806_0955060981.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 0;
+      position: relative;
+    }
+
+    .hero-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .dark-mode {
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    .dark-mode .navbar {
+      background-color: var(--navbar-dark);
+    }
+
+    .section {
+      padding: 50px 0;
+    }
+
+    .dark-mode .bg-light {
+      background-color: var(--bg-dark) !important;
+    }
+
+    .dark-mode .bg-info {
+      background-color: var(--highlight-dark) !important;
+    }
+
+    .dark-mode .footer {
+      background-color: var(--navbar-dark);
+      color: var(--text-dark);
+    }
+
+    #theme-toggle {
+      border: none;
+      background: none;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .footer {
+      background-color: var(--navbar-light);
+      padding: 20px 0;
+    }
+
+    .nav-link {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    #theme-toggle {
+      cursor: pointer;
+    }
+    /* Menambahkan margin pada bagian beranda agar tidak tertutupi navbar */
+.hero-section {
+  margin-top: 70px; /* Sesuaikan dengan tinggi navbar */
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <i class="fas fa-map-marker-alt"></i> Desa Bancarkembar
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="#home"><i class="fas fa-home"></i> Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#map"><i class="fas fa-map"></i> Peta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#description"><i class="fas fa-info-circle"></i> Keterangan</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about"><i class="fas fa-users"></i> Tentang</a>
+          </li>
+        </ul>
+        <button id="theme-toggle">
+          <i id="theme-icon" class="fas fa-sun"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+  
+
+ <!-- Bagian Beranda -->
+<div class="hero-section text-center" id="home">
+    <div class="container hero-content">
+      <h1 class="display-5">Selamat Datang di Kota Bancar Kembar</h1>
+      <p class="lead">
+        Kota Bancar Kembar, terletak di Kecamatan Purwokerto Selatan, Kabupaten Banyumas. Sebagai kawasan yang berkembang pesat, Bancar Kembar menawarkan berbagai fasilitas modern dan suasana kota yang dinamis, namun tetap mempertahankan nilai-nilai budaya lokal.
+      </p>
+    </div>
+  </div>
+  
+  <!-- Bagian Peta -->
+  <section id="map" class="bg-light section">
+    <div class="container text-center">
+      <h2><i class="fas fa-map-marked-alt"></i> Peta Kota Bancar Kembar</h2>
+      <iframe src="Peta.html" style="width: 100%; height: 500px; border: none;"></iframe>
+    </div>
+  </section>
+  
+  <!-- Bagian Keterangan -->
+  <section id="description" class="bg-info section">
+    <div class="container">
+      <h2><i class="fas fa-info-circle"></i> Keterangan</h2>
+      <p>
+        Kota Bancar Kembar adalah salah satu pusat pertumbuhan ekonomi di Kecamatan Purwokerto Selatan. Kota ini memiliki berbagai fasilitas publik seperti pusat perbelanjaan, gedung perkantoran, serta area rekreasi yang menarik bagi warga lokal maupun pengunjung.
+      </p>
+      <p>
+        Sebagai kota yang berkembang, Bancar Kembar memiliki infrastruktur yang baik dengan akses transportasi yang mudah, seperti angkutan umum, ojek online, dan jalur sepeda yang terawat. Kawasan ini juga dikenal sebagai pusat perdagangan dengan banyaknya toko, kafe, restoran, dan pasar tradisional yang menyediakan beragam kebutuhan sehari-hari.
+      </p>
+      <p>
+        Kehidupan masyarakat di Bancar Kembar sangat dinamis, didominasi oleh kalangan pekerja kantoran, pedagang, dan mahasiswa. Kota ini memiliki berbagai fasilitas pendidikan mulai dari sekolah dasar hingga perguruan tinggi, yang menjadi daya tarik bagi para pendatang.
+      </p>
+      <p>
+        Selain itu, Bancar Kembar juga memiliki beberapa taman kota yang sering digunakan sebagai tempat berkumpul dan berolahraga oleh warga. Taman ini dilengkapi dengan area bermain anak, jogging track, dan ruang terbuka hijau yang nyaman untuk bersantai.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Bagian Tentang -->
+  <section id="about" class="bg-dark text-light section">
+    <div class="container">
+      <h2><i class="fas fa-users"></i> Tentang Kota Bancar Kembar</h2>
+      <p>
+        Kota Bancar Kembar dikenal sebagai salah satu pusat kegiatan bisnis di Kabupaten Banyumas. Dengan letaknya yang strategis di Kecamatan Purwokerto Selatan, kota ini menjadi tujuan utama bagi para pebisnis dan pelancong yang mencari pengalaman urban di wilayah Banyumas.
+      </p>
+      <p>
+        Meskipun berkembang sebagai pusat kota, Bancar Kembar tetap mempertahankan beberapa warisan budaya lokal. Berbagai acara seperti festival musik, pameran seni, dan pasar malam sering diadakan, memberikan kesempatan bagi warga untuk menikmati hiburan dan budaya lokal.
+      </p>
+      <p>
+        Kota ini juga memiliki beberapa ikon terkenal, seperti alun-alun yang menjadi pusat aktivitas warga, gedung-gedung bersejarah, serta pusat kuliner yang menawarkan berbagai hidangan khas Banyumas yang populer di kalangan wisatawan.
+      </p>
+      <p>
+        Dengan pertumbuhan yang pesat, Bancar Kembar terus meningkatkan fasilitas publiknya, seperti sistem transportasi yang terintegrasi, taman-taman kota yang asri, dan berbagai tempat hiburan yang menjadikan kota ini destinasi favorit bagi penduduk setempat maupun wisatawan.
+      </p>
+    </div>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="footer text-center">
+    <p>&copy; 2024 Peta Kota Bancar Kembar | Dibuat oleh Azka Nur Fachmie</p>
+  </footer>
+  
+  <script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    function toggleTheme() {
+      body.classList.toggle('dark-mode');
+      if (body.classList.contains('dark-mode')) {
+        themeIcon.classList.replace('fa-sun', 'fa-moon');
+      } else {
+        themeIcon.classList.replace('fa-moon', 'fa-sun');
+      }
+    }
+
+    themeToggle.addEventListener('click', toggleTheme);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

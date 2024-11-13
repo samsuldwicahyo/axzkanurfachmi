@@ -1,0 +1,1 @@
+var json_TempatRekreasi_8 = {"type":"FeatureCollection","name":"TempatRekreasi_8","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:OGC:1.3:CRS84"}},"features":[{"type":"Feature","properties":{"id":"1","Nama":"Mas Kumambang Park"},"geometry":{"type":"Point","coordinates":[109.237941378205662,-7.411926330469115]}}]}
